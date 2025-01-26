@@ -22,7 +22,7 @@ The Diabetes prediction dataset is a collection of medical and demographic data 
 
 ## FOLDER STRUCTURE
 - codes: This folder contains the python files
-    - train.py: This file reads the data and builds multiple models and chooses the best model (Logistic Regression) based on the performance. Please refer to the Modelling.ipynb in the notebook folder, how we select this LR.
+    - train.py: This file reads the data and builds multiple models and chooses the best model (Logistic Regression) based on the performance. Please refer to the Modelling.ipynb in the notebook folder, how we selected XGBoost as our final best model.
     - predict.py: Flask app
     - test.py: Used to test the Flask app
     - lambda_function.py
@@ -112,7 +112,7 @@ If you dont have an AWS account please go through this [video](https://www.youtu
 Once this is done follow this [video](https://www.youtube.com/watch?v=wyZ9aqQOXvs&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=88). It covers how to expose the Lambda using API Gateway
 
 
-Testing the service remotely: I have already hosted this service via AWS Lambda function at: https://exkg23rhe2.execute-api.us-east-2.amazonaws.com/capstone-1/predict
+Testing the service remotely: I have already hosted this service via AWS Lambda function at: https://m7v5cpvd06.execute-api.us-east-2.amazonaws.com/capstone-2-lambda-deploy/predict
 Feel free to test it by running the below command. The url is already set in the test_lambda_main.py file. If you wish to test your app, replace the url in this file and run the same below command.
 
 ```
