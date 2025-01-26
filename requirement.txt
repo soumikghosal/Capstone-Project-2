@@ -1,0 +1,8 @@
+pandas
+scikit-learn
+cloudpickle
+waitress
+flask
+requests
+xgboost
+seaborn

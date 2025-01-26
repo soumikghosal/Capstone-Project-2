@@ -1,0 +1,15 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY ["requirement.txt", "./"]
+COPY ["./scripts/train.py", "./scripts/predict.py", "./scripts/"]
+COPY ["./models/diabetes_pred_model.bin", "./models/"]
+
+RUN pip install -r requirement.txt
+
+WORKDIR /app/scripts
+
+EXPOSE 9696
+
+ENTRYPOINT ["waitress-serve", "--listen=0.0.0.0:9696", "predict:app"]
